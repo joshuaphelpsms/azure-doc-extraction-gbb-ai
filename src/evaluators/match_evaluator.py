@@ -13,11 +13,6 @@ class MatchEvaluator:
         self._key = key
         self._string_evaluator = StringEvaluator(config)
 
-    def get_value(data, key):
-        try:
-            return data[key]
-        except Exception as e:
-            return Exception(e)
 
     def get_values(self, data):
         jsonpath_xpr = parse(self._key)
